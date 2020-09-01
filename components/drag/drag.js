@@ -63,6 +63,11 @@ Component({
    */
 
   methods: {
+    onCloseMiniWindow() {
+      this.setData({
+          isShow: false
+      })
+    },
 
   }
 })

@@ -3,8 +3,10 @@
 <block wx:if="{{isShow}}">
   <view class="drag" data-area="{{safeArea}}" change:prop="{{move.init}}" prop="{{position}}" catchtouchmove="{{move.handleTouchMove}}" catchtouchend="{{move.handleTouchEnd}}">
     texttext
+
+      
+    <view class="mini-window-close" catchtap="onCloseMiniWindow">
+      <image class="mini-window-close-image" src="/image/icon-close.png"></image>
+    </view>
   </view>
-
-  
-
 </block>
