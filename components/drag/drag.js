@@ -34,15 +34,7 @@ Component({
         position: null
       });
       try {
-        let position = wx.getStorageSync('chengchema')
-        if (!position) {
-          position = {
-            left: (safeArea.width - 50 - 10) + "px",
-            top: parseInt(safeArea.height / 2 + 100) + "px"
-          }
-        }
         this.setData({
-          position,
           isShow: true
         });
 
@@ -71,11 +63,6 @@ Component({
    */
 
   methods: {
-    setPosition(position) {
-      wx.setStorage({
-        key: "chengchema",
-        data: position
-      })
-    }
+
   }
 })
