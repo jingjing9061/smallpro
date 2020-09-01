@@ -15,6 +15,21 @@ Page({
       url: '../logs/logs'
     })
   },
+  jumplogin: function () {
+    wx.navigateTo({
+      url: '../login/login'
+    })
+  },
+  jumptest:function(){
+   wx.navigateTo({
+     url: '../test3/test3',
+   })
+  },
+  eventclick:function(){
+    wx.navigateBack({
+      url:'../event/event'
+    })
+  },
   onLoad: function () {
     if (app.globalData.userInfo) {
       this.setData({

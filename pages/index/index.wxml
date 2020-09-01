@@ -10,4 +10,14 @@
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
   </view>
+  <view>
+  </view>
+    <!-- <button type="primary" size="default" bindtap='jumplogin'>jumpbtn</button>
+    <button type='primary' size='default' bindtap='eventclick'>event</button> -->
+    <button type="primary" size="default" bindtap='jumptest'>testbtn</button>
+
+
+
+    
 </view>
+

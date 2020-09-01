@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "test",
+  "usingComponents": {
+    "dialog": "../Dialog/dialog",
+    "component-tag-name":"../customevent/customevent"
+  }
+}

@@ -1,0 +1,4 @@
+/* pages/footer.wxss */
+.bgcolor {
+  background: red;
+}

@@ -1,0 +1,26 @@
+.container1{
+  /* flex 消除元素块状的特性 */
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  /* flex-wrap: wrap; */
+  height: 700rpx;
+  background: gainsboro;
+}
+.box{
+  width: 200rpx;
+  height: 200rpx;
+}
+.color1{
+  font-size: 40rpx;
+  background-color: chocolate;
+}
+.color2{
+  font-size: 28rpx;
+  background-color: green;
+}
+.color3{
+  font-size: 20rpx;
+  background-color: yellow;
+}

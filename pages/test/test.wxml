@@ -1,0 +1,109 @@
+<!-- v-for -->
+<!-- <view wx:for="{{array}}" wx:for-index="idx">
+  {{idx}}: {{item.message}}
+</view>
+
+<block wx:for="{{[1, 2, 3]}}">
+  <view> {{index}}: </view>
+  <view> {{item}} </view>
+</block>
+<view wx:for="array">
+  {{item}}
+</view>
+
+<view wx:for="{{[1,2,3]}} ">
+  {{item}}
+</view> -->
+
+<!-- if -->
+<!-- <view wx:if="{{isshow}}">true</view>
+<block wx:if="{{!isshow}}">
+  <view>box1</view>
+  <view>box2</view>
+</block>
+<block wx:else>
+  <view>box3</view>
+</block> -->
+
+<!-- 
+<template name="odd">
+  <view> odd </view>
+</template>
+<template name="even">
+  <view> even </view>
+</template>
+
+<block wx:for="{{[1, 2, 3, 4, 5]}}">
+	<template is="{{item % 2 == 0 ? 'even' : 'odd'}}"/>
+</block>
+
+<view id="taptest" data-hi="weChat" bindtap='tapname'>click me</view>
+ -->
+
+<import src="item.wxml"/>
+<template is="item" data="{{text:'forbar'}}"/>
+
+<view>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</view>
+<!--  需要写相对路径-->
+<include src="../header/header.wxml"/>
+<view>body</view>
+<include src="../footer/footer.wxml"/>
+
+<view>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</view>
+
+<!-- ios wxs 比js快2-20倍 -->
+<wxs module="m1">
+  var msg = "hello world";
+  module.exports.message = msg;
+</wxs>
+<view> {{m1.message}} </view>
+
+<view>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</view>
+
+<!-- 自定义组件引用 -->
+<dialog id='dialog' 
+      title='我是标题' 
+      content='恭喜你，学会了小程序组件' 
+      cancelText='知道了' 
+      confirm='谢谢你'
+      bind:cancelEvent="_cancelEvent"  
+      bind:confirmEvent="_confirmEvent">
+     <view slot="before">插入到组件slot中的内容before</view>
+     <view slot="after"after>插入到组件slot name="after"中的内容</view>
+    </dialog>
+    
+    <button type="primary" bindtap="showDialog"> ClickMe! </button>
+    <!-- <button type="primary" bindtap='customevent'>自定义事件</button> -->
+
+  <view>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</view>
+
+<!-- 自定义事件 -->
+<view>
+  <component-tag-name bind:increment="_incrementTotal" num="2"></component-tag-name>
+  <component-tag-name bind:increment="_incrementTotal" num="3"></component-tag-name>
+  <component-tag-name bind:increment="_incrementTotal" num="5"></component-tag-name>
+  三个按钮的总和：{{total}} 
+</view>
+
+
+<!-- template使用 -->
+<template name="msgItem">
+  <text>{{index}} : {{msg}}</text>
+  <text>{{time}}</text>
+</template>
+<template is="msgItem" data="{{...tdata}}"></template>
+
+
+
+<!-- import 文件引用使用   -->
+<import src="./item.wxml"/>
+<template is="item"/>
+<include src="./item.wxml"/>  
+
+
+<!-- 6位数密码框 -->
+<button type="primary" bindtap="jumppassword"> 6位数密码框! </button>
+
+
+
+

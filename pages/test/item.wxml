@@ -1,0 +1,4 @@
+<template name="item">
+  <view> import 只引用文件中定义的template</view>
+</template>
+<text>include 除了template以外的代码拷贝到此处</text>
