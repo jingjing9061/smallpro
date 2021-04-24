@@ -1,0 +1,78 @@
+<view class="container">
+  <swiper 
+    class="video-swiper" 
+    circular="{{circular}}" 
+    easing-function="{{easingFunction}}" 
+    vertical 
+    current="0"
+    duration="{{duration}}" 
+    bindanimationfinish="animationfinish">
+    <!-- curQueue 循环会导致video重新插入，objectFit 不可变更 -->
+    <swiper-item wx:for="{{curQueue}}" wx:key="id">
+      <video 
+        id="video_{{index}}" 
+        class="video_item" 
+        loop="{{loop}}" 
+        enable-play-gesture 
+        enable-progress-gesture 
+        show-center-play-btn="{{false}}"
+        controls="{{false}}"
+        src="{{item.url}}" 
+        data-id="{{item.id}}"
+        object-fit="{{'contain' || 'cover'}}"
+        data-index="{{index}}"
+        bindplay="onPlay"
+        bindpause="onPause"
+        bindended="onEnded"
+        binderror="onError"
+        bindtimeupdate="onTimeUpdate"
+        bindwaiting="onWaiting"
+        bindprogress="onProgress"
+        catchtap="videoTap"
+      >
+        <!-- 按钮暂停 -->
+        <image class="play-btn" catchtap="videoTap"  wx:if="{{!isPaly}}" src="../../image/pause.png"></image>
+
+        <!-- 右侧操作栏 -->
+        <view class="tools">
+            <!-- 头像关注 -->
+            <view class="avatar">
+                <view class="imgwrapper" catchtap="anchorHomepage" data-item="{{item}}" data-idx="{{index}}">
+                    <image style="width:98rpx;height:98rpx; border-radius: 50%;border-solid:2rpx solid #ffffff" src="{{item.headImg || '../../image/icon-avator.png'}}"></image>
+                </view>
+                <view catchtap="followHander" class="unfllow" data-item="{{item}}">
+                    <image class="img" wx:if="{{item.followFlag===0}}" src='../../image/unfllow.png'></image>
+                </view>
+            </view>
+            <!-- 收藏 -->
+            <view class="item" catchtap="collectionHandler" data-item="{{item}}">
+                <!-- <image class="icon" animation="{{animation}}" -->
+                <image class="icon" src="{{item.likeFlag==1?'../../image/like.png':'../../image/dislike.png'}}"></image>
+                <view class="text">{{item.likes}} </view>
+            </view>
+            <!-- 评论 -->
+            <view class="item" catchtap="commentHandler" data-item="{{item}}">
+                <image class="icon" src='../../image/comment.png'></image>
+                <view class="text">{{item.commentNum}}</view>
+            </view>
+            <!-- 转发 -->
+            <view class="item" catchtap="forwardHander" data-item="{{item}}" data-idx="{{index}}">
+                <image class="icon" src='../../image/send.png'></image>
+                <view class="text">{{item.shares}}</view>
+            </view>
+        </view>
+        <!-- 底部操作 -->
+        <view class="footer">
+            <view style="margin-bottom:20px"> {{item.index}}</view>
+            <view class="estate" catchtap="estateDetail" data-item="{{item}}">
+                <image class="img" src="../../image/house.png"></image>
+                <text style="vertical-align: middle">视频楼盘点这里</text>
+            </view>
+            <view wx:if="{{item.anchorName}}" class="name">{{item.anchorName}}</view>
+            <view wx:if="{{item.introduce}}" class="text" style="margin-bottom:150rpx">{{item.introduce}}</view>
+        </view>
+      </video>
+    </swiper-item>
+  </swiper>
+</view>
+

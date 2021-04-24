@@ -1,0 +1,36 @@
+<view class='dowpdown'>
+  <view wx:for="{{dowpdowndata}}" data-id="{{index}}" wx:key="this"  catchtap='dropdownTap'>
+    <text>{{dowpdowndata[index]}}</text>
+    <image class='arrowimg' src="../../image/icon-triangle1.png" mode='widthFix'></image>
+  </view>
+</view>
+<!-- 下拉框选项 -->
+<view class='sort{{upordown}}'  hidden='{{sort_hidden}}'>
+    <view wx:if="{{dropType == 0}}" class='item' wx:for='{{selectdata1}}' wx:key='this' data-item="{{item}}"  catchtap='optionTap'>
+     <text class='{{item.label==statusSelectd?"dropdown_active":""}}'>{{selectdata1[index].label}}</text>
+    </view>
+   <view wx:if="{{dropType == 1}}" class='item' wx:for='{{selectdata2}}' wx:key='this' data-item="{{item}}" catchtap='optionTap'>
+     <text class='{{item.label==dataSelected?"dropdown_active":""}}'>{{selectdata1[index].label}}</text>
+    </view>
+</view>
+
+<!-- mask -->
+<view class='zhezhao' hidden='{{zhezhao}}' catchtouchmove='true' bindtap='maskhander'></view>
+
+<view class='container'>
+   <movable-area class="movable-area" scale-area="true">
+        <movable-view id='movable-view' class="movable-view" bindtap='aa' direction="all" bindchange="onChange" bindscale="onScale" scale="true" scale-min="0.5" scale-max="2" scale-value="1" inertia="true">
+        <view class='housewrapper' wx:for="{{datalist}}" wx:key="this" wx:for-item="flooritem">
+           {{flooritem.floorname}} 楼层
+            <view wx:for="{{flooritem.unitlist}}" wx:key="this" wx:for-item="unititem">
+             {{unititem.unit}}  单元/
+                <view wx:for="{{unititem.cell}}" wx:key="this" wx:for-item="cellitem">
+            
+                  {{cellitem.cellName}}cellName 房间
+
+                </view>
+            </view>
+        </view>
+        </movable-view>
+   </movable-area>
+</view>

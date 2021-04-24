@@ -1,0 +1,62 @@
+/* components/drag/drag.wxss */
+.drag{
+  transform: translateY(-50%);
+  position: fixed;
+  top: 530rpx;
+  left: 330rpx;
+  font-size: 20rpx;
+  display: block;
+  line-height: 30rpx;
+  width: 200rpx;
+  height: 300rpx;
+  padding: 6rpx;
+  background: pink;
+  color: rgba(255, 255, 255, 1);
+  border: none;
+  z-index: 10000;
+  box-sizing: border-box;
+}
+
+.mini-window-close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 100;
+  width: 36rpx;
+  height: 36rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6rpx;
+  overflow: hidden;
+}
+
+.mini-window-close-image {
+  width: 20rpx;
+  height: 20rpx;
+}
+
+
+.mini-window-tips {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(250, 87, 65, 1);
+  padding: 4rpx 0;
+}
+
+.mini-window-tips-image {
+  width: 20rpx;
+  height: 20rpx;
+  margin-right: 10rpx;
+}
+
+.mini-window-tips-text {
+  color: #fff;
+  font-size: 20rpx;
+}

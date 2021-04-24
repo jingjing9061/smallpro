@@ -1,0 +1,141 @@
+.container {
+    width: 100%;
+    height: 100%
+  }
+  
+  .video-swiper {
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  .video_item {
+    height: 100%;
+    width: 100%
+  }
+
+  .play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 120rpx;
+    width: 120rpx;
+}
+  /* .video{
+    width: 100vw;
+    height: 100vh;
+  } */
+
+
+  /* 右侧操作栏 */
+.tools {
+  position: fixed;
+  right: 0;
+  bottom: 314rpx;
+  z-index: 99999;
+  max-width: 100rpx;
+}
+
+.tools .avatar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 26rpx;
+  margin-bottom: 42rpx;
+
+}
+.tools .avatar .imgwrapper{
+  border: 2rpx solid #fff;
+  border-radius: 50%;
+}
+
+/* .tools .avatar .icon {
+  width: 98rpx;
+  height: 98rpx;
+  border-radius: 50%;
+} */
+
+.tools .img {
+  width: 100%;
+  height: 100%;
+}
+
+.tools .unfllow {
+  width: 34rpx;
+  height: 34rpx;
+  margin-top: -20rpx;
+}
+
+.tools .item {
+  margin-bottom: 40rpx;
+  margin-right: 26rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tools .item .icon {
+  width: 88rpx;
+  height: 80rpx;
+}
+
+.tools .item .text {
+  margin-top: 14rpx;
+  font-size: 28rpx;
+  font-weight: 500;
+  font-family: PingFangSC-Medium, PingFang SC;
+  text-shadow: 0rpx 4rpx 8rpx rgba(0, 0, 0, 0.08);
+  color: #FFFFFF;
+}
+
+/* 底部操作栏 */
+.footer {
+  position: fixed;
+  left:0;
+  right: 0;
+  bottom: 0;
+  padding: 0 32rpx;
+  /* left: 32rpx;
+  right: 32rpx; */
+  /* bottom: 150rpx; */
+  color: #FFFFFF;
+  /* 遮罩背景ui不要了
+  background: url('https://pcdn.hopsontong.com/betterLife-mini/zhezhao.jpg');
+  background-repeat: no-repeat;
+  background-position: center center; */
+}
+
+.footer .estate { 
+  border: none;
+  margin: 0;
+  display: inline-block;
+  padding: 12rpx;
+  border-radius: 10rpx;
+  background: rgba(0, 0, 0, 0.27);
+  font-size: 28rpx;
+  font-family: PingFangSC-Medium, PingFang SC;
+}
+
+
+
+.footer .estate .img {
+  vertical-align: middle;
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 8rpx;
+}
+.footer .text {
+  display: flex;
+  justify-items: center;
+  font-size: 28rpx;
+  font-family: PingFangSC-Medium, PingFang SC;
+  line-height: 40rpx;
+}
+.footer .name {
+  margin: 16rpx 0;
+  font-size: 18px;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 500;
+  line-height: 25px;
+}
+

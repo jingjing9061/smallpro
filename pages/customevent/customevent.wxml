@@ -1,0 +1,6 @@
+<!--pages/customevent/customevent.wxml-->
+
+<!-- 自定义事件 -->
+<view>
+    <button bindtap="_incrementCounter">{{counter}}</button>
+</view>

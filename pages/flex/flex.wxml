@@ -1,0 +1,5 @@
+<view class="container1">
+    <view class='box color1'>1</view>
+    <view class='box color2'>2</view> 
+    <view class='box color3'>3</view>
+</view>
