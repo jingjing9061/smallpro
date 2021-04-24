@@ -1,5 +1,9 @@
 /**app.wxss**/
+<<<<<<< HEAD
 /* .container {
+=======
+.container {
+>>>>>>> 999b5578dd8435a9c88f265ca9d793aa1d4eca3e
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -7,4 +11,8 @@
   justify-content: space-between;
   padding: 200rpx 0;
   box-sizing: border-box;
+<<<<<<< HEAD
 }  */
+=======
+} 
+>>>>>>> 999b5578dd8435a9c88f265ca9d793aa1d4eca3e
