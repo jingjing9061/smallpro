@@ -1,9 +1,5 @@
 {
   "usingComponents": {
-<<<<<<< HEAD
     "drag": "../../components/drag/drag"
-=======
-    "drag": "../components/drag/drag"
->>>>>>> 999b5578dd8435a9c88f265ca9d793aa1d4eca3e
   }
 }

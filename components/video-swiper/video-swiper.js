@@ -212,7 +212,7 @@ Component({
       },
       estateDetail(){
           
-      }
+      },
 
 
       //收藏
