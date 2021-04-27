@@ -5,15 +5,15 @@
 
 
 <video-swiper 
-class="video-swiper" 
-video-list="{{videoList}}" 
-bindplay="onPlay"
-bindpause="onPause"
-bindtimeupdate="onTimeUpdate"
-bindended="onEnded"
-binderror="onError"
-bindwaiting="onWaiting"
-bindprogress="onProgress"
-bindloadedmetadata="onLoadedMetaData"
-bind:updatalist="updatalist"
+  index="{{current_index}}"
+  video-list="{{videoList}}" 
+  bindplay="onPlay"
+  bindpause="onPause"
+  bindtimeupdate="onTimeUpdate"
+  bindended="onEnded"
+  binderror="onError"
+  bindwaiting="onWaiting"
+  bindprogress="onProgress"
+  bindUpdataVideo="onUpdataVideo"
+  bindloadedmetadata="onLoadedMetaData"
 ></video-swiper>
